@@ -7,6 +7,7 @@ import validateValues from './validateValues';
 
 const CreateAccount = () => {
   let navigate = useNavigate();
+  //initial values of form
   const initialValues = {
     email: '',
     password: '',
@@ -15,20 +16,23 @@ const CreateAccount = () => {
     phoneNumber: '',
     isGoing: '',
   };
+  //all states
   const [formValues, setFormValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
+  //handling form inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
-
+  // form validation
   const handleAccount = (e) => {
     e.preventDefault();
     setErrors(validateValues(formValues));
     setIsSubmit(true);
   };
+  //submit form and redirect to chart page
   useEffect(() => {
     console.log(errors.length);
     console.log(isSubmit);
@@ -39,6 +43,7 @@ const CreateAccount = () => {
 
   return (
     <div className="row ">
+      {/* date range section */}
       <div className=" col ">
         <div className="selectDate">
           <div className="selectDate__details">
@@ -50,7 +55,7 @@ const CreateAccount = () => {
           </div>
         </div>
       </div>
-
+      {/* form section */}
       <div className="col">
         <form className="form" onSubmit={handleAccount}>
           <h3>Create an account</h3>

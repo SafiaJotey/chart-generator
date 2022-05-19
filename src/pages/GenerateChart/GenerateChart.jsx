@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import BarChart from '../../components/BarChart/Barchart';
 
 const GenerateChart = () => {
+  //state declaring
   const [data, setData] = useState([57, 24, 14, 37, 32, 10, 68, 50, 54, 87]);
+  // function for creating random data
   const randomData = () => {
     const data = Array.from(
       {
@@ -13,7 +15,7 @@ const GenerateChart = () => {
     setData(data);
   };
 
-  var i = 0;
+  //declaring variable for chart
   var height = 500;
   var width = 500;
   var barwidth = 35;

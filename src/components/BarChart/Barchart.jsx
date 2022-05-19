@@ -2,9 +2,9 @@
 import * as d3 from 'd3';
 import React, { useEffect, useRef } from 'react';
 
-function BarChart({ width, height, barwidth, barOffset, data }) {
+function BarChart({ width, height, data }) {
   const ref = useRef();
-
+  //rendering background
   useEffect(() => {
     d3.select(ref.current)
       .attr('viewBox', `0 0 ${width} ${height} `)
@@ -12,10 +12,12 @@ function BarChart({ width, height, barwidth, barOffset, data }) {
       .style('background', '#f4f4f4');
   }, []);
 
+  //rendering bars depending on data changes
   useEffect(() => {
     draw();
   }, [data]);
 
+  //creating bar chart
   const draw = () => {
     const svg = d3.select(ref.current);
     var selection = svg.selectAll('rect').data(data);
