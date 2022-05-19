@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// importing styles
 import '../../styles/css/style.css';
+// importing validation file
 import validateValues from './validateValues';
 
 const CreateAccount = () => {

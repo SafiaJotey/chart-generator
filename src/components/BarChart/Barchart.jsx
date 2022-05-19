@@ -7,7 +7,7 @@ function BarChart({ width, height, barwidth, barOffset, data }) {
 
   useEffect(() => {
     d3.select(ref.current)
-      .attr('viewBox', `0 0 500 500`)
+      .attr('viewBox', `0 0 ${width} ${height} `)
       .style('margin', 30)
       .style('background', '#f4f4f4');
   }, []);
