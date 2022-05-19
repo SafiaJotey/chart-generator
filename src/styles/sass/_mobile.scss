@@ -1,0 +1,19 @@
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+    .col {
+      width: 100%;
+      .selectDate {
+        padding: 20px 0;
+
+        .selectDate__details {
+          padding: 200px 0 20px;
+          background-size: contain;
+        }
+      }
+      .form {
+        padding: 20px;
+      }
+    }
+  }
+}

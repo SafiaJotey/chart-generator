@@ -1,0 +1,67 @@
+@import 'config';
+@import 'utilities';
+@import 'mobile';
+
+.selectDate {
+  padding: 100px 50px 0px;
+  background-color: #f7f7f7;
+  .selectDate__details {
+    background: url(https://i.ibb.co/qF4PvWt/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 350px 0 100px;
+    text-align: center;
+    .selectDate__title {
+      color: $heading-color;
+    }
+  }
+}
+
+.form {
+  padding: 30px 0px 10px 80px;
+  background: white;
+  .form__label {
+    color: $secondary-color;
+    font-size: 12px;
+  }
+  .form__input {
+    width: 80%;
+    padding: 12px 2px;
+    margin-top: 5px;
+
+    border: 1px solid $border-color;
+    border-radius: 5px;
+  }
+  .form__error {
+    color: red;
+  }
+  .form__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 5px;
+    .form__checkbox __input {
+      width: 20px;
+
+      // margin: 0;
+    }
+    .form__checkbox__para {
+      margin-left: 4px;
+      color: $heading-color;
+      font-weight: 700;
+    }
+  }
+}
+
+button {
+  margin: 20px 0;
+  padding: 10px 15px;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.chartHeader {
+  color: red;
+}
